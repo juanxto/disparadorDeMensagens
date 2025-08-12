@@ -68,3 +68,15 @@ def enviar_mensagem(numero, nome):
 
     except Exception as e:
         print(f"❌ Erro ao enviar mensagem para {nome}: {e}")
+
+
+if __name__ == "__main__":
+    print("🔄 Buscando contatos no Supabase...")
+    contatos = buscar_contatos()
+
+    if contatos:
+        print(f"📞 Encontrados {len(contatos)} contatos. Enviando mensagens...")
+        for contato in contatos[:3]:  # até 3 contatos
+            enviar_mensagem(contato["telefone"], contato["nome"])
+    else:
+        print("❌ Nenhum contato encontrado para enviar mensagens.")
