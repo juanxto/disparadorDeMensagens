@@ -12,3 +12,7 @@ SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 ZAPI_INSTANCE_ID = os.getenv("ZAPI_INSTANCE_ID")
 ZAPI_TOKEN = os.getenv("ZAPI_TOKEN")
 ZAPI_CLIENT_TOKEN = os.getenv("ZAPI_CLIENT_TOKEN")
+
+# Verificar se todas as variáveis foram carregadas
+if not all([SUPABASE_URL, SUPABASE_KEY, ZAPI_INSTANCE_ID, ZAPI_TOKEN, ZAPI_CLIENT_TOKEN]):
+    raise ValueError("❌ Erro: Verifique se todas as variáveis estão definidas no arquivo .env")
