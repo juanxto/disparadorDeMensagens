@@ -1,6 +1,6 @@
 # 📨 Disparador de Mensagens
 
-Sistema automatizado para envio de mensagens WhatsApp usando Python, Supabase e Z-API.
+Sistema automatizado para envio de mensagens no WhatsApp usando Python, Supabase e Z-API.
 
 ## ⚙️ Setup do Projeto
 
